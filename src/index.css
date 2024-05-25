@@ -1,13 +1,124 @@
+/* index.css */
+
 body {
+  font-family: Arial, sans-serif;
+  background-color: #e28181;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.video-container {
+  margin-bottom: 20px;
+}
+
+.notes-container {
+  margin-top: 20px;
+}
+
+.notes-container h2 {
+  color: #333;
+}
+
+.note-item {
+  padding: 10px;
+  margin: 10px 0;
+  background: #f9f9f9;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.note-item p {
+  margin: 0;
+  color: #555;
+}
+
+.note-item .timestamp {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.note-item .actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.note-item .actions button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.note-item .actions button:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+}
+
+form button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .note-item .actions {
+    top: 40px;
+    right: 10px;
+  }
 }
